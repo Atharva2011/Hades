@@ -65,7 +65,7 @@ nav a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg') center/cover no-repeat;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo9eFEs2b7c6s9QzIpI9tAlZEv8bsvjp9FjQ-Mb1OPzCCBigZXPHKSqcHj&s=10') center/cover no-repeat;
   animation: fadeIn 3s ease-out forwards;
   opacity: 0;
 }
@@ -93,20 +93,21 @@ section.menu {
 }
 
 .menu-item {
-  background: #1c1c1c;
+  background: linear-gradient(to bottom right, #1e1e1e, #2a2a2a);
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: transform 0.4s;
   box-shadow: 0 0 20px #111;
+  border: 1px solid crimson;
 }
 
 .menu-item:hover {
-  transform: translateY(-10px);
+  transform: scale(1.03);
 }
 
 .menu-item img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .menu-item h3 {
@@ -116,7 +117,7 @@ section.menu {
 
 .menu-item p {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #ccc;
 }
 
 footer {
@@ -162,5 +163,6 @@ footer {
     </div>
   </section>  <footer>
     &copy; 2025 House of Hades. All rights reserved.
-  </footer></body>
+  </footer>
+</body>
 </html>
