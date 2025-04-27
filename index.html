@@ -181,6 +181,25 @@
       transform: translateY(0);
     }
 
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-buttons a {
+      background-color: crimson;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #b20000;
+    }
+
   </style>
 </head>
 
@@ -193,8 +212,11 @@
     <nav>
       <a href="#">Home</a>
       <a href="#menu">Wall Of Fame</a>
-      <a href="#story">About</a>
-      <a href="#">Orders</a>
+      <a href="about.html">About</a>
+      <div class="nav-buttons">
+        <a href="teaser.html">Teaser</a>
+        <a href="sneak.html">Sneak Peak</a>
+      </div>
     </nav>
   </header>
 
