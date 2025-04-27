@@ -7,7 +7,93 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     /* Same styles as index.html */
-    /* Adjust as needed */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: crimson;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: crimson;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section.sneak-peak {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('IMG-20250426-WA0000.jpg') center/cover no-repeat;
+      animation: fadeIn 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    section.sneak-peak img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      font-size: 0.8rem;
+    }
+
   </style>
 </head>
 
@@ -19,15 +105,12 @@
     <h1>CHTHONIC TROFÉ</h1>
     <nav>
       <a href="index.html">Home Page</a>
-      <a href="#sneak-peak">Sneak Peak</a>
       <a href="teaser.html">Teaser</a>
     </nav>
   </header>
 
-  <section id="sneak-peak">
-    <div class="image-container">
-      <img src="IMG-20250426-WA0004.jpg" alt="Sneak Peak Image">
-    </div>
+  <section class="sneak-peak">
+    <img src="IMG-20250427-WA0000.jpg" alt="Sneak Peak Image">
   </section>
 
   <footer>
