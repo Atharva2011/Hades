@@ -1,11 +1,9 @@
-
-</body>
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teaser - CHTHONIC TROFÉ</title>
+  <title>CHTHONIC TROFÉ</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -81,19 +79,85 @@
       width: 100%;
     }
 
-    .video-container {
+    .hero {
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: url('IMG-20250427-WA0000.jpg') center/cover no-repeat;
+      animation: fadeIn 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    section.menu {
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       background: #111;
     }
 
-    .video-container iframe {
-      border: 10px solid crimson;
-      border-radius: 10px;
-      width: 80%;
-      height: 80%;
+    .menu-item {
+      position: relative;
+      background: linear-gradient(to bottom right, #1e1e1e, #2a2a2a);
+      padding: 1rem;
+      border-radius: 16px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      box-shadow: 0 0 20px #111;
+      border: 1px solid crimson;
+    }
+
+    .menu-item::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: rgba(220, 20, 60, 0.5);
+      border-radius: 18px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-item:hover::before {
+      opacity: 1;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .menu-item h3 {
+      margin: 1rem 0 0.5rem;
+      color: crimson;
+    }
+
+    .menu-item p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     footer {
@@ -112,20 +176,41 @@
     </a>
     <h1>CHTHONIC TROFÉ</h1>
     <nav>
-      <a href="index.html">Home Page</a>
-      <div class="nav-buttons">
-        <a href="teaser.html">Teaser</a>
-        <a href="sneak.html">Sneak Peak</a>
-      </div>
+      <a href="#home">Home Page</a>
+      <a href="#menu">Wall Of Fame</a>
+      <a href="#about">About</a>
+      <a href="#orders">Orders</a>
+      <a href="teaser.html">Teaser</a>
+      <a href="sneak.html">Sneak Peak</a>
     </nav>
   </header>
 
-  <section class="video-container">
-    <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+  <section id="home" class="hero"></section>
+
+  <section id="menu" class="menu">
+    <div class="menu-item">
+      <img class="scroll-fade" src="IMG-20250426-WA0004.jpg" alt="Underworld Special">
+    </div>
   </section>
 
   <footer>
     &copy; || 2025 CHTHONIC TROFÉ || All rights reserved. ||
   </footer>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.scroll-fade');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
