@@ -1,153 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chthonic Trofé - Menu</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        header {
-            text-align: center;
-            padding: 30px 0;
-            font-size: 2.5em;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, #ff0040, #7f00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-        }
-        .special {
-            text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            color: #ccc;
-        }
-        .realm-section {
-            margin: 30px;
-        }
-        .realm-title {
-            font-size: 2em;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .dish {
-            background: #1c1c1c;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .dish:hover {
-            transform: translateY(-8px);
-        }
-        .realm-tartarus .dish:hover {
-            box-shadow: 0 0 20px red;
-        }
-        .realm-asphodel .dish:hover {
-            box-shadow: 0 0 20px orange;
-        }
-        .realm-elysium .dish:hover {
-            box-shadow: 0 0 20px limegreen;
-        }
-        .realm-styx .dish:hover {
-            box-shadow: 0 0 20px dodgerblue;
-        }
-        .dish-name {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        .dish-desc {
-            font-size: 0.95em;
-            color: #aaa;
-        }
-        .dish-price {
-            margin-top: 10px;
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #fff;
-        }
-        table {
-            margin: 50px auto;
-            width: 90%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #555;
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #222;
-        }
-        td {
-            background-color: #111;
-        }
-        /* Button */
-        .book-seat-btn {
-            display: block;
-            margin: 30px auto;
-            padding: 15px 30px;
-            background: #ff0040;
-            border: none;
-            color: white;
-            font-size: 1.2em;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .book-seat-btn:hover {
-            background: #e60039;
-        }
-        /* Popup */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-            z-index: 999;
-        }
-        .popup-content {
-            background: #111;
-            width: 100%;
-            max-width: 400px;
-            padding: 30px;
-            border-radius: 20px 20px 0 0;
-            text-align: center;
-            animation: slideUp 0.5s ease forwards;
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-        .popup-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .popup-content h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #ff0040;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Chthonic Trofé Menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
+    header {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 30px 0;
+      background: linear-gradient(90deg, #ff0040, #7f00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+    .special {
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .realm-section {
+      margin: 30px;
+    }
+    .realm-title {
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .dish {
+      background: #1c1c1c;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .dish:hover {
+      transform: translateY(-5px);
+    }
+    .realm-tartarus .dish:hover {
+      box-shadow: 0 0 20px red;
+    }
+    .realm-asphodel .dish:hover {
+      box-shadow: 0 0 20px orange;
+    }
+    .realm-elysium .dish:hover {
+      box-shadow: 0 0 20px limegreen;
+    }
+    .realm-styx .dish:hover {
+      box-shadow: 0 0 20px dodgerblue;
+    }
+    .dish-name {
+      font-size: 1.4em;
+      margin-bottom: 8px;
+    }
+    .dish-desc {
+      font-size: 0.95em;
+      color: #aaa;
+    }
+    .dish-price {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    table {
+      margin: 40px auto;
+      width: 90%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #222;
+    }
+    td {
+      background-color: #111;
+    }
+    .book-seat-btn {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background: #ff0040;
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .book-seat-btn:hover {
+      background: #e60039;
+    }
+    /* Popup */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      z-index: 999;
+    }
+    .popup-content {
+      background: #111;
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      animation: slideUp 0.5s ease forwards;
+    }
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    .popup-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .popup-content h2 {
+      font-size: 2em;
+      color: #ff0040;
+    }
+  </style>
 </head>
 <body>
 
@@ -157,174 +152,173 @@
 
 <!-- Tartarus -->
 <div class="realm-section realm-tartarus">
-    <div class="realm-title">TARTARUS (Spicy & Intense Zone)</div>
+  <div class="realm-title">TARTARUS</div>
 
-    <div class="dish">
-        <div class="dish-name">Inferno Wings of Tartarus</div>
-        <div class="dish-desc">Blistering ghost pepper wings, smoky hot sauce.</div>
-        <div class="dish-price">₹379</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Blazing Fury Nachos</div>
-        <div class="dish-desc">Fiery jalapeño nachos with molten cheese, chili flakes, and flame salsa.</div>
-        <div class="dish-price">₹349</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Molten Core Lava Burger</div>
-        <div class="dish-desc">Double-layered spicy chicken burger with molten pepper cheese center.</div>
-        <div class="dish-price">₹459</div>
-    </div>
+  <div class="dish">
+    <div class="dish-name">Inferno Wings of Tartarus</div>
+    <div class="dish-desc">Blistering ghost pepper wings, smoky hot sauce.</div>
+    <div class="dish-price">₹379</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Blazing Fury Nachos</div>
+    <div class="dish-desc">Fiery jalapeño nachos with molten cheese and flame salsa.</div>
+    <div class="dish-price">₹349</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Molten Core Lava Burger</div>
+    <div class="dish-desc">Double-layered spicy chicken burger with molten pepper cheese center.</div>
+    <div class="dish-price">₹459</div>
+  </div>
 </div>
 
 <!-- Asphodel -->
 <div class="realm-section realm-asphodel">
-    <div class="realm-title">ASPHODEL (Smoky & Grilled Zone)</div>
+  <div class="realm-title">ASPHODEL</div>
 
-    <div class="dish">
-        <div class="dish-name">Lava-Grilled Ember Skewers</div>
-        <div class="dish-desc">Charred veg and meat skewers brushed with ember ash aioli.</div>
-        <div class="dish-price">₹429</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Ashen Flame Flatbread</div>
-        <div class="dish-desc">Charcoal-roasted flatbread topped with smoked veggies and feta dust.</div>
-        <div class="dish-price">₹379</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Myst's Smoked Rib Platter</div>
-        <div class="dish-desc">Slow-smoked pork or lamb ribs glazed with mythic ember glaze.</div>
-        <div class="dish-price">₹649</div>
-    </div>
+  <div class="dish">
+    <div class="dish-name">Lava-Grilled Ember Skewers</div>
+    <div class="dish-desc">Charred veg and meat skewers brushed with ember ash aioli.</div>
+    <div class="dish-price">₹429</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Ashen Flame Flatbread</div>
+    <div class="dish-desc">Charcoal-roasted flatbread topped with smoked veggies and feta dust.</div>
+    <div class="dish-price">₹379</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Myst's Smoked Rib Platter</div>
+    <div class="dish-desc">Slow-smoked pork or lamb ribs glazed with ember glaze.</div>
+    <div class="dish-price">₹649</div>
+  </div>
 </div>
 
 <!-- Elysium -->
 <div class="realm-section realm-elysium">
-    <div class="realm-title">ELYSIUM (Healthy & Gourmet Zone)</div>
+  <div class="realm-title">ELYSIUM</div>
 
-    <div class="dish">
-        <div class="dish-name">Elysian Garden Bowl</div>
-        <div class="dish-desc">Fresh Greek salad with quinoa, feta, pomegranate dressing.</div>
-        <div class="dish-price">₹349</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Ambrosia Bliss Wrap</div>
-        <div class="dish-desc">Whole wheat wrap with hummus, sprouts, avocado, and grilled tofu/chicken.</div>
-        <div class="dish-price">₹399</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Hero’s Power Platter</div>
-        <div class="dish-desc">Grilled salmon/Paneer steak with herb quinoa and steamed asparagus.</div>
-        <div class="dish-price">₹599</div>
-    </div>
+  <div class="dish">
+    <div class="dish-name">Elysian Garden Bowl</div>
+    <div class="dish-desc">Fresh Greek salad with quinoa, feta, pomegranate dressing.</div>
+    <div class="dish-price">₹349</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Ambrosia Bliss Wrap</div>
+    <div class="dish-desc">Whole wheat wrap with hummus, sprouts, avocado, and grilled tofu/chicken.</div>
+    <div class="dish-price">₹399</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Hero’s Power Platter</div>
+    <div class="dish-desc">Grilled salmon/paneer steak with herb quinoa and asparagus.</div>
+    <div class="dish-price">₹599</div>
+  </div>
 </div>
 
 <!-- Styx -->
 <div class="realm-section realm-styx">
-    <div class="realm-title">STYX BAR (Desserts & Mocktails Zone)</div>
+  <div class="realm-title">STYX BAR</div>
 
-    <div class="dish">
-        <div class="dish-name">Nectar of Styx Float</div>
-        <div class="dish-desc">Honey-elderflower blue lagoon mocktail with edible gold.</div>
-        <div class="dish-price">₹299</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Frozen Flames Sundae</div>
-        <div class="dish-desc">Charcoal ice cream with molten lava brownie chunks.</div>
-        <div class="dish-price">₹279</div>
-    </div>
-    <div class="dish">
-        <div class="dish-name">Cerberus' Choco Bite</div>
-        <div class="dish-desc">Triple-layer chocolate mousse — a dessert with three fierce flavors.</div>
-        <div class="dish-price">₹319</div>
-    </div>
+  <div class="dish">
+    <div class="dish-name">Nectar of Styx Float</div>
+    <div class="dish-desc">Honey-elderflower blue lagoon mocktail with edible gold.</div>
+    <div class="dish-price">₹299</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Frozen Flames Sundae</div>
+    <div class="dish-desc">Charcoal ice cream with molten brownie chunks.</div>
+    <div class="dish-price">₹279</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Cerberus' Choco Bite</div>
+    <div class="dish-desc">Triple-layer chocolate mousse with fierce flavors.</div>
+    <div class="dish-price">₹319</div>
+  </div>
 </div>
 
 <!-- Table -->
 <table>
-    <tr>
-        <th>Realm</th>
-        <th>Dish Name</th>
-        <th>Price</th>
-    </tr>
-    <tr>
-        <td>Tartarus</td>
-        <td>Inferno Wings of Tartarus</td>
-        <td>₹379</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Blazing Fury Nachos</td>
-        <td>₹349</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Molten Core Lava Burger</td>
-        <td>₹459</td>
-    </tr>
-    <tr>
-        <td>Asphodel</td>
-        <td>Lava-Grilled Ember Skewers</td>
-        <td>₹429</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Ashen Flame Flatbread</td>
-        <td>₹379</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Myst's Smoked Rib Platter</td>
-        <td>₹649</td>
-    </tr>
-    <tr>
-        <td>Elysium</td>
-        <td>Elysian Garden Bowl</td>
-        <td>₹349</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Ambrosia Bliss Wrap</td>
-        <td>₹399</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Hero’s Power Platter</td>
-        <td>₹599</td>
-    </tr>
-    <tr>
-        <td>Styx Bar</td>
-        <td>Nectar of Styx Float</td>
-        <td>₹299</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Frozen Flames Sundae</td>
-        <td>₹279</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Cerberus' Choco Bite</td>
-        <td>₹319</td>
-    </tr>
+  <tr>
+    <th>Realm</th>
+    <th>Dish Name</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Tartarus</td>
+    <td>Inferno Wings of Tartarus</td>
+    <td>₹379</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Blazing Fury Nachos</td>
+    <td>₹349</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Molten Core Lava Burger</td>
+    <td>₹459</td>
+  </tr>
+  <tr>
+    <td>Asphodel</td>
+    <td>Lava-Grilled Ember Skewers</td>
+    <td>₹429</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ashen Flame Flatbread</td>
+    <td>₹379</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Myst's Smoked Rib Platter</td>
+    <td>₹649</td>
+  </tr>
+  <tr>
+    <td>Elysium</td>
+    <td>Elysian Garden Bowl</td>
+    <td>₹349</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ambrosia Bliss Wrap</td>
+    <td>₹399</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Hero’s Power Platter</td>
+    <td>₹599</td>
+  </tr>
+  <tr>
+    <td>Styx</td>
+    <td>Nectar of Styx Float</td>
+    <td>₹299</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Frozen Flames Sundae</td>
+    <td>₹279</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Cerberus' Choco Bite</td>
+    <td>₹319</td>
+  </tr>
 </table>
 
-<!-- Book Your Seat Button -->
+<!-- Book Your Seat -->
 <button class="book-seat-btn" onclick="openPopup()">Book Your Seat Now</button>
 
-<!-- Popup -->
 <div class="popup-overlay" id="popup">
-    <div class="popup-content">
-        <h2>COMING SOON</h2>
-    </div>
+  <div class="popup-content">
+    <h2>COMING SOON</h2>
+  </div>
 </div>
 
 <script>
-    function openPopup() {
-        document.getElementById('popup').classList.add('active');
-        setTimeout(() => {
-            document.getElementById('popup').classList.remove('active');
-        }, 2000);
-    }
+function openPopup() {
+  document.getElementById('popup').classList.add('active');
+  setTimeout(() => {
+    document.getElementById('popup').classList.remove('active');
+  }, 2000);
+}
 </script>
 
 </body>
