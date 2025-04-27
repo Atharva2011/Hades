@@ -95,14 +95,6 @@
       }
     }
 
-    .hero h2 {
-      font-size: 3rem;
-      background: rgba(0,0,0,0.7);
-      padding: 1rem 2rem;
-      border: 2px solid crimson;
-      border-radius: 10px;
-    }
-
     section.menu {
       padding: 5rem 2rem;
       display: grid;
@@ -172,20 +164,6 @@
       transform: translateY(0);
     }
 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #111;
-    }
-
-    .image-container img {
-      border: 10px solid crimson;
-      border-radius: 10px;
-      width: 80%;
-    }
-
     footer {
       text-align: center;
       padding: 2rem;
@@ -211,18 +189,12 @@
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <h2>CHTHONIC TROFÉ</h2>
-  </section>
+  <section id="home" class="hero"></section>
 
   <section id="menu" class="menu">
     <div class="menu-item">
       <img class="scroll-fade" src="IMG-20250426-WA0004.jpg" alt="Underworld Special">
     </div>
-  </section>
-
-  <section id="teaser" class="image-container">
-    <img src="IMG-20250426-WA0001.jpg" alt="Sneak Peak Image">
   </section>
 
   <footer>
@@ -245,4 +217,4 @@
     fadeElements.forEach(el => observer.observe(el));
   </script>
 </body>
-  </html>
+</html>
