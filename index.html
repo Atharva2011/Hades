@@ -25,7 +25,7 @@
       top: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       padding: 1rem 2rem;
       background: rgba(0, 0, 0, 0.8);
@@ -33,13 +33,28 @@
     }
 
     header img {
-      height: 50px;
-      border-radius: 8px;
+      height: 60px;  /* Adjust the size based on your preference */
+      width: auto;   /* Maintain aspect ratio */
+      border-radius: 8px;  /* Add some rounding if logo is square */
+      transition: transform 0.3s ease;  /* Add smooth hover effect */
+      padding: 5px;
+    }
+
+    header img:hover {
+      transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+    header h1 {
+      color: crimson;
+      font-size: 2rem;
+      margin-left: 15px;
+      letter-spacing: 2px;
     }
 
     nav {
       display: flex;
       gap: 2rem;
+      margin-left: auto;
     }
 
     nav a {
@@ -190,6 +205,7 @@
     <a href="#">
       <img src="IMG-20250425-WA0009.jpg" alt="Logo">
     </a>
+    <h1>CHTHONIC TROFÉ</h1>
     <nav>
       <a href="#">Home</a>
       <a href="#menu">Wall Of Fame</a>
