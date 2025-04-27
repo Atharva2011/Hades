@@ -1,304 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHTHONIC TROFÉ MENU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0a0a0a;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 999;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: crimson;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background: crimson;
-      transition: 0.3s;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section.menu {
-      padding: 5rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      background: #111;
-    }
-
-    .menu-item {
-      position: relative;
-      background: linear-gradient(to bottom right, #1e1e1e, #2a2a2a);
-      padding: 1rem;
-      border-radius: 16px;
-      transition: transform 0.4s, box-shadow 0.4s;
-      box-shadow: 0 0 20px #111;
-      border: 1px solid crimson;
-    }
-
-    .menu-item:hover {
-      transform: scale(1.05);
-    }
-
-    .menu-item:hover h3 {
-      text-shadow: 0 0 15px crimson, 0 0 25px crimson;
-    }
-
-    .menu-item img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .menu-item h3 {
-      margin: 1rem 0 0.5rem;
-      color: crimson;
-    }
-
-    .menu-item p {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    .menu-item.realm-tartarus {
-      border: 1px solid red;
-      box-shadow: 0 0 15px red;
-    }
-
-    .menu-item.realm-asphodel {
-      border: 1px solid orange;
-      box-shadow: 0 0 15px orange;
-    }
-
-    .menu-item.realm-elysium {
-      border: 1px solid green;
-      box-shadow: 0 0 15px green;
-    }
-
-    .menu-item.realm-styx-bar {
-      border: 1px solid blue;
-      box-shadow: 0 0 15px blue;
-    }
-
-    .menu-item.active {
-      box-shadow: 0 0 15px red !important;
-      border: 1px solid red !important;
-    }
-
-    .specialty {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 5rem;
-      padding: 2rem;
-      color: crimson;
-    }
-
-    table {
-      width: 100%;
-      margin-top: 3rem;
-      border-collapse: collapse;
-    }
-
-    table th, table td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      color: white;
-    }
-
-    table th {
-      background-color: #222;
-    }
-
-    table td {
-      background-color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: white;
-      font-size: 1.1rem;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <title>Chthonic Trofé - Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff0040, #7f00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        .special {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .menu-item {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 12px #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-8px);
+        }
+        .realm-tartarus:hover {
+            box-shadow: 0 0 20px #ff0000;
+        }
+        .realm-asphodel:hover {
+            box-shadow: 0 0 20px #ff7f00;
+        }
+        .realm-elysium:hover {
+            box-shadow: 0 0 20px #00ff7f;
+        }
+        .realm-styx:hover {
+            box-shadow: 0 0 20px #007fff;
+        }
+        .menu-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .menu-item p {
+            font-size: 0.95em;
+            color: #aaa;
+        }
+        .price {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .bottom-table {
+            margin: 50px auto;
+            width: 90%;
+            border-collapse: collapse;
+        }
+        .bottom-table th, .bottom-table td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: center;
+        }
+        .bottom-table th {
+            background-color: #222;
+        }
+        .bottom-table td {
+            background-color: #111;
+        }
+        .book-seat-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: #ff0040;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .book-seat-btn:hover {
+            background: #e60039;
+        }
+        /* Popup styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            z-index: 999;
+        }
+        .popup-content {
+            background: #111;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            animation: slideUp 0.5s ease forwards;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        .popup-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .popup-content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #ff0040;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>CHTHONIC TROFÉ MENU</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="teaser.html">Teaser</a>
-      <a href="sneak.html">Sneak Peak</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<header>CHTHONIC TROFÉ</header>
 
-  <div class="specialty">
-    <p>Our Specialty - "A Feast Fit for the Underworld"</p>
-  </div>
+<div class="special">Our Specialty: A Divine Feast Born from the Underworld</div>
 
-  <section class="menu">
-    <div class="menu-item realm-tartarus" onclick="toggleActive(this)">
-      <img src="tartarus-image.jpg" alt="Tartarus Dish">
-      <h3>Inferno Wings of Tartarus</h3>
-      <p>₹379</p>
+<div class="menu-container">
+    <div class="menu-item realm-tartarus">
+        <h3>Inferno Wings of Tartarus</h3>
+        <p>Blistering ghost pepper wings, smoky hot sauce.</p>
+        <div class="price">₹379</div>
     </div>
-
-    <div class="menu-item realm-asphodel" onclick="toggleActive(this)">
-      <img src="asphodel-image.jpg" alt="Asphodel Dish">
-      <h3>Lava-Grilled Ember Skewers</h3>
-      <p>₹429</p>
+    <div class="menu-item realm-tartarus">
+        <h3>Blazing Fury Nachos</h3>
+        <p>Fiery jalapeño nachos with molten cheese, chili flakes, and flame salsa.</p>
+        <div class="price">₹349</div>
     </div>
-
-    <div class="menu-item realm-elysium" onclick="toggleActive(this)">
-      <img src="elysium-image.jpg" alt="Elysium Dish">
-      <h3>Elysian Garden Bowl</h3>
-      <p>₹349</p>
+    <div class="menu-item realm-tartarus">
+        <h3>Molten Core Lava Burger</h3>
+        <p>Double-layered spicy chicken burger with molten pepper cheese center.</p>
+        <div class="price">₹459</div>
     </div>
-
-    <div class="menu-item realm-styx-bar" onclick="toggleActive(this)">
-      <img src="styx-bar-image.jpg" alt="Styx Bar Dish">
-      <h3>Nectar of Styx Float</h3>
-      <p>₹299</p>
+    <div class="menu-item realm-asphodel">
+        <h3>Lava-Grilled Ember Skewers</h3>
+        <p>Charred veg and meat skewers brushed with ember ash aioli.</p>
+        <div class="price">₹429</div>
     </div>
-  </section>
+    <div class="menu-item realm-asphodel">
+        <h3>Ashen Flame Flatbread</h3>
+        <p>Charcoal-roasted flatbread topped with smoked veggies and feta dust.</p>
+        <div class="price">₹379</div>
+    </div>
+    <div class="menu-item realm-asphodel">
+        <h3>Myst's Smoked Rib Platter</h3>
+        <p>Slow-smoked pork or lamb ribs glazed with mythic ember glaze.</p>
+        <div class="price">₹649</div>
+    </div>
+    <div class="menu-item realm-elysium">
+        <h3>Elysian Garden Bowl</h3>
+        <p>Fresh Greek salad with quinoa, feta, pomegranate dressing.</p>
+        <div class="price">₹349</div>
+    </div>
+    <div class="menu-item realm-elysium">
+        <h3>Ambrosia Bliss Wrap</h3>
+        <p>Whole wheat wrap with hummus, sprouts, avocado, and grilled tofu/chicken.</p>
+        <div class="price">₹399</div>
+    </div>
+    <div class="menu-item realm-elysium">
+        <h3>Hero’s Power Platter</h3>
+        <p>Grilled salmon/Paneer steak with herb quinoa and steamed asparagus.</p>
+        <div class="price">₹599</div>
+    </div>
+    <div class="menu-item realm-styx">
+        <h3>Nectar of Styx Float</h3>
+        <p>Honey-elderflower blue lagoon mocktail with edible gold.</p>
+        <div class="price">₹299</div>
+    </div>
+    <div class="menu-item realm-styx">
+        <h3>Frozen Flames Sundae</h3>
+        <p>Charcoal ice cream with molten lava brownie chunks.</p>
+        <div class="price">₹279</div>
+    </div>
+    <div class="menu-item realm-styx">
+        <h3>Cerberus' Choco Bite</h3>
+        <p>Triple-layer chocolate mousse — a dessert with three fierce flavors.</p>
+        <div class="price">₹319</div>
+    </div>
+</div>
 
-  <table>
-    <thead>
-      <tr>
+<button class="book-seat-btn" onclick="openPopup()">Book Your Seat Now</button>
+
+<table class="bottom-table">
+    <tr>
         <th>Realm</th>
         <th>Dish Name</th>
         <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Tartarus</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Tartarus</td>
         <td>Inferno Wings of Tartarus</td>
         <td>₹379</td>
-      </tr>
-      <tr>
-        <td>Tartarus</td>
+    </tr>
+    <tr>
         <td>Blazing Fury Nachos</td>
         <td>₹349</td>
-      </tr>
-      <tr>
-        <td>Tartarus</td>
+    </tr>
+    <tr>
         <td>Molten Core Lava Burger</td>
         <td>₹459</td>
-      </tr>
-      <tr>
-        <td>Asphodel</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Asphodel</td>
         <td>Lava-Grilled Ember Skewers</td>
         <td>₹429</td>
-      </tr>
-      <tr>
-        <td>Asphodel</td>
+    </tr>
+    <tr>
         <td>Ashen Flame Flatbread</td>
         <td>₹379</td>
-      </tr>
-      <tr>
-        <td>Asphodel</td>
+    </tr>
+    <tr>
         <td>Myst's Smoked Rib Platter</td>
         <td>₹649</td>
-      </tr>
-      <tr>
-        <td>Elysium</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Elysium</td>
         <td>Elysian Garden Bowl</td>
         <td>₹349</td>
-      </tr>
-      <tr>
-        <td>Elysium</td>
+    </tr>
+    <tr>
         <td>Ambrosia Bliss Wrap</td>
         <td>₹399</td>
-      </tr>
-      <tr>
-        <td>Elysium</td>
+    </tr>
+    <tr>
         <td>Hero’s Power Platter</td>
         <td>₹599</td>
-      </tr>
-      <tr>
-        <td>Styx Bar</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Styx Bar</td>
         <td>Nectar of Styx Float</td>
         <td>₹299</td>
-      </tr>
-      <tr>
-        <td>Styx Bar</td>
+    </tr>
+    <tr>
         <td>Frozen Flames Sundae</td>
         <td>₹279</td>
-      </tr>
-      <tr>
-        <td>Styx Bar</td>
+    </tr>
+    <tr>
         <td>Cerberus' Choco Bite</td>
         <td>₹319</td>
-      </tr>
-    </tbody>
-  </table>
+    </tr>
+</table>
 
-  <footer>
-    <p>&copy; 2025 Chthonic Trofé - All Rights Reserved</p>
-  </footer>
+<div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <h2>COMING SOON</h2>
+    </div>
+</div>
 
-  <script>
-    function toggleActive(element) {
-      // Remove the active class from all elements first
-      const allItems = document.querySelectorAll('.menu-item');
-      allItems.forEach(item => {
-        item.classList.remove('active');
-      });
-
-      // Add the active class to the clicked element
-      element.classList.add('active');
+<script>
+    function openPopup() {
+        document.getElementById('popup').classList.add('active');
+        setTimeout(() => {
+            document.getElementById('popup').classList.remove('active');
+        }, 2000); 
     }
-  </script>
+</script>
 
 </body>
 </html>
-``
