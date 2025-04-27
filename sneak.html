@@ -71,6 +71,7 @@
       background: url('IMG-20250426-WA0000.jpg') center/cover no-repeat;
       animation: fadeIn 3s ease-out forwards;
       opacity: 0;
+      text-align: center;
     }
 
     @keyframes fadeIn {
@@ -79,21 +80,32 @@
       }
     }
 
-    section.sneak-peak .content {
-      text-align: center;
-      color: crimson;
+    .sneak-content {
       background: rgba(0, 0, 0, 0.6);
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+      width: 80%;
+      max-width: 800px;
     }
 
-    section.sneak-peak img {
-      width: 80%;
+    .sneak-content h2 {
+      font-size: 2.5rem;
+      color: crimson;
+      margin-bottom: 1rem;
+    }
+
+    .sneak-content p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .sneak-content img {
+      width: 100%;
       max-width: 600px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -108,7 +120,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="IMG-20250425-WA0009.jpg" alt="Logo">
+      <img src="IMG-20250425-WA0009.jpg" alt="Logo" style="width: 100px; height: auto;">
     </a>
     <h1>CHTHONIC TROFÉ</h1>
     <nav>
@@ -118,9 +130,9 @@
   </header>
 
   <section class="sneak-peak">
-    <div class="content">
+    <div class="sneak-content">
       <h2>Sneak Peak: The Underworld Experience</h2>
-      <p>Get ready to dive into the depths of the underworld with our exclusive sneak peak. Prepare yourself for what's to come.</p>
+      <p>Get ready for a thrilling sneak peek into the underworld! Explore our exclusive preview of the upcoming experiences. Prepare to be amazed!</p>
       <img src="IMG-20250426-WA0004.jpg" alt="Underworld Sneak Peak">
     </div>
   </section>
