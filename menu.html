@@ -81,25 +81,8 @@
       border: 1px solid crimson;
     }
 
-    .menu-item::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      background: rgba(220, 20, 60, 0.5);
-      border-radius: 18px;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
     .menu-item:hover {
-      transform: scale(1.03);
-    }
-
-    .menu-item:hover::before {
-      opacity: 1;
+      transform: scale(1.05);
     }
 
     .menu-item:hover h3 {
@@ -121,32 +104,29 @@
       color: #ccc;
     }
 
-    .realm-tartarus {
+    .menu-item.realm-tartarus {
       border: 1px solid red;
       box-shadow: 0 0 15px red;
     }
 
-    .realm-asphodel {
+    .menu-item.realm-asphodel {
       border: 1px solid orange;
       box-shadow: 0 0 15px orange;
     }
 
-    .realm-elysium {
+    .menu-item.realm-elysium {
       border: 1px solid green;
       box-shadow: 0 0 15px green;
     }
 
-    .realm-styx-bar {
+    .menu-item.realm-styx-bar {
       border: 1px solid blue;
       box-shadow: 0 0 15px blue;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: white;
-      font-size: 1.1rem;
+    .menu-item.active {
+      box-shadow: 0 0 15px red !important;
+      border: 1px solid red !important;
     }
 
     .specialty {
@@ -157,9 +137,33 @@
       color: crimson;
     }
 
-    .menu-item.active {
-      box-shadow: 0 0 15px red !important;
-      border: 1px solid red !important;
+    table {
+      width: 100%;
+      margin-top: 3rem;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      color: white;
+    }
+
+    table th {
+      background-color: #222;
+    }
+
+    table td {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      color: white;
+      font-size: 1.1rem;
     }
 
   </style>
@@ -206,6 +210,78 @@
     </div>
   </section>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Realm</th>
+        <th>Dish Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tartarus</td>
+        <td>Inferno Wings of Tartarus</td>
+        <td>₹379</td>
+      </tr>
+      <tr>
+        <td>Tartarus</td>
+        <td>Blazing Fury Nachos</td>
+        <td>₹349</td>
+      </tr>
+      <tr>
+        <td>Tartarus</td>
+        <td>Molten Core Lava Burger</td>
+        <td>₹459</td>
+      </tr>
+      <tr>
+        <td>Asphodel</td>
+        <td>Lava-Grilled Ember Skewers</td>
+        <td>₹429</td>
+      </tr>
+      <tr>
+        <td>Asphodel</td>
+        <td>Ashen Flame Flatbread</td>
+        <td>₹379</td>
+      </tr>
+      <tr>
+        <td>Asphodel</td>
+        <td>Myst's Smoked Rib Platter</td>
+        <td>₹649</td>
+      </tr>
+      <tr>
+        <td>Elysium</td>
+        <td>Elysian Garden Bowl</td>
+        <td>₹349</td>
+      </tr>
+      <tr>
+        <td>Elysium</td>
+        <td>Ambrosia Bliss Wrap</td>
+        <td>₹399</td>
+      </tr>
+      <tr>
+        <td>Elysium</td>
+        <td>Hero’s Power Platter</td>
+        <td>₹599</td>
+      </tr>
+      <tr>
+        <td>Styx Bar</td>
+        <td>Nectar of Styx Float</td>
+        <td>₹299</td>
+      </tr>
+      <tr>
+        <td>Styx Bar</td>
+        <td>Frozen Flames Sundae</td>
+        <td>₹279</td>
+      </tr>
+      <tr>
+        <td>Styx Bar</td>
+        <td>Cerberus' Choco Bite</td>
+        <td>₹319</td>
+      </tr>
+    </tbody>
+  </table>
+
   <footer>
     <p>&copy; 2025 Chthonic Trofé - All Rights Reserved</p>
   </footer>
@@ -225,3 +301,4 @@
 
 </body>
 </html>
+``
