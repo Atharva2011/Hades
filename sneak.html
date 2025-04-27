@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneak Peak - CHTHONIC TROFÉ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+    }
+
+    header img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      padding: 5px;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      color: crimson;
+      font-size: 2rem;
+      margin-left: 15px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: crimson;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+
+    .image-container img {
+      border: 10px solid crimson;
+      border-radius: 10px;
+      width: 80%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="IMG-20250425-WA0009.jpg" alt="Logo">
+    </a>
+    <h1>CHTHONIC TROFÉ</h1>
+    <nav>
+      <a href="index.html">Home Page</a>
+      <div class="nav-buttons">
+        <a href="teaser.html">Teaser</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="image-container">
+    <img src="IMG-20250426-WA0001.jpg" alt="Sneak Peak Image">
+  </section>
+
+  <footer>
+    &copy; || 2025 CHTHONIC TROFÉ || All rights reserved. ||
+  </footer>
+</body>
+</html>
